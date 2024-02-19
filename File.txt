@@ -1,0 +1,11 @@
+SELECT customers.first_name, customers.phone FROM customers;
+UNION
+SELECT suppliers.first_name, suppliers.phone FROM suppliers;
+
+SELECT country.city_name, country.name FROM country;
+UNION ALL
+SELECT country2.city_name, country2.name FROM country2;
+
+SELECT customers.price, customers.date FROM customers;
+INTERSECT
+SELECT suppliers.price, suppliers.date FROM suppliers;
